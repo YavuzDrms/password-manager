@@ -199,7 +199,7 @@ void help(){
             std::cout << "List all passwords.\n";
         }else if(a == "get"){
             std::cout << "Get spesific password.\n";
-        }else if (a == "help"){
+        }else if (a == "clear"){
             std::cout << "Clear all paswords.\n";
         }
     }
@@ -280,8 +280,8 @@ int main()
         std::cin >> inputPassword;
         if (inputPassword == mainPassowrd)
         {
+            loadPasswords();
             std::cout << "Correct" << std::endl;
-            encryptionKey = mainPassowrd;
             int cmd = get_command();
         }
         else{
